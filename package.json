@@ -1,0 +1,23 @@
+{
+  "name": "linthtml-config-htmlacademy",
+  "version": "1.0.0",
+  "description": "HTML Academy LintHTML config",
+  "main": "index.js",
+  "scripts": {
+    "test": "linthtml test/*.html --config index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htmlacademy/linthtml-config-htmlacademy.git"
+  },
+  "keywords": [],
+  "author": "Nikolai Shabalin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/htmlacademy/linthtml-config-htmlacademy/issues"
+  },
+  "homepage": "https://github.com/htmlacademy/linthtml-config-htmlacademy#readme",
+  "devDependencies": {
+    "@linthtml/linthtml": "^0.6.0"
+  }
+}
