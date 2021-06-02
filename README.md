@@ -1,31 +1,27 @@
 # linthtml-config-htmlacademy
+> Это стандартный конфигурационный файл для stylelint от [HTML Academy](https://htmlacademy.ru/).
 
-Recommended shareable config for [linthtml](https://github.com/htmlacademy/linthtml-config-htmlacademy).
-It turns on some of the [rules](https://github.com/linthtml/linthtml/blob/develop/docs/rules.md) within [linthtml](https://github.com/linthtml/linthtml).
-
-Use it as is or as a foundation for your own config.
-
-## Installation
+## Установка
 
 ```bash
 npm install htmllint-config-htmlacademy -D
 ```
 
-## Usage
+## Использование
 
-If you've installed `linthtml-config-htmlacademy` locally within your project, just set your `linthtml` config to:
+Если вы установили `linthtml-config-htmlacademy` локально в свой проект, jто просто примените его в конфигурационном файле `stylelint` вашего проекта:
 
 ```json
 {
-  "extends": "@linthtml/linthtml-config-recommended"
+  "extends": "htmllint-config-htmlacademy"
 }
 ```
 
-### Extending the config
+### Расширение конфига
 
-Simply add a `"rules"` key to your config, then add your overrides and additions there.
+Просто добавьте ключ `"rules"` в ваш конфиг после `"extends": "linthtml-config-htmlacademy"`, а затем добавьте туда свои правила.
 
-For example, to change the `line-max-len` rule and increase the limit, turn off the `tag-close` rule, and add the `attr-order` rule:
+Например, если вы хотите изменить максимальную длину `line-max-len`, то нужно:
 
 ```json
 {
@@ -34,17 +30,7 @@ For example, to change the `line-max-len` rule and increase the limit, turn off 
     "line-max-len": [
       true,
       120
-    ],
-    "tag-close": "off",
-    "attr-order": [
-      true,
-      [
-        "id", "class"
-      ]
     ]
   }
 }
 ```
-
-
-## VS Code
