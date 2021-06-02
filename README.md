@@ -1,5 +1,5 @@
 # linthtml-config-htmlacademy
-> Это стандартный конфигурационный файл для stylelint от [HTML Academy](https://htmlacademy.ru/).
+> Это стандартный конфигурационный файл для linthtml от [HTML Academy](https://htmlacademy.ru/).
 
 ## Установка
 
@@ -9,7 +9,7 @@ npm install htmllint-config-htmlacademy -D
 
 ## Использование
 
-Если вы установили `linthtml-config-htmlacademy` локально в свой проект, jто просто примените его в конфигурационном файле `stylelint` вашего проекта:
+Если вы установили `linthtml-config-htmlacademy` локально в свой проект, jто просто примените его в конфигурационном файле `linthtml` вашего проекта:
 
 ```json
 {
@@ -25,7 +25,7 @@ npm install htmllint-config-htmlacademy -D
 
 ```json
 {
-  "extends": "stylelint-config-recommended",
+  "extends": "linthtml-config-recommended",
   "rules": {
     "line-max-len": [
       true,
