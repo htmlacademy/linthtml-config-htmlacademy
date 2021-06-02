@@ -1,20 +1,20 @@
 module.exports = {
-	rules: {
+	"id-class-ignore-regex" : false,
+	"line-max-len-ignore-regex": false,
+	"spec-char-escape" : false,
+	"rules": {
 		"attr-bans": false,
-		"attr-name-style": [
-			true,
-			"dash"
-		],
-		"attr-new-line" : [true, 6], // discuss
+		"attr-name-style": false,
+		"attr-new-line" : [true, 6],
 		"attr-no-dup": true,
 		"attr-no-unsafe-char": true,
-		// "attr-order" : ["class", "id"],
+		"attr-order" : false,
 		"attr-quote-style": [true, "double"],
 		"attr-req-value": true,
 		"attr-validate": true,
 		"button-req-content" : true,
 		"class-no-dup": true,
-		"class-style" : [true, "bem"],
+		"class-style" : false,
 		"doctype-first": true,
 		"doctype-html5": true,
 		"fieldset-contains-legend" : true,
@@ -26,7 +26,7 @@ module.exports = {
 		"html-req-lang": true,
 		"html-valid-content-model": true,
 		"id-class-no-ad" : false,
-		"id-class-style" : [true, "bem"],
+		"id-class-style" : false,
 		"id-no-dup": true,
 		"id-style" : [true, "bem"],
 		"img-req-alt": true,
@@ -53,16 +53,14 @@ module.exports = {
 		"tag-close": true,
 		"tag-name-lowercase": true,
 		"tag-name-match": true,
-		"tag-self-close": false,
 		"tag-req-attr" : [true, {
 			"img": [
-				{
-					"name": "src"
-				},
-				{
-					"name": "alt"
-				}
+				{"name": "src"},
+				{"name": "alt"},
+				{"name": "width"},
+				{"name": "height"}
 			]}],
+		"tag-self-close" : false,
 		"title-max-len": false,
 		"title-no-dup": true,
 	}
