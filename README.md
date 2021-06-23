@@ -4,7 +4,7 @@
 ## Установка
 
 ```bash
-npm install htmllint-config-htmlacademy -D
+npm install linthtml-config-htmlacademy -D
 ```
 
 ## Использование
