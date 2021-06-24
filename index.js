@@ -10,7 +10,7 @@ module.exports = {
 		'attr-no-unsafe-char': true,
 		'attr-order' : false,
 		'attr-quote-style': [true, 'double'],
-		'attr-req-value': true,
+		'attr-req-value': false,
 		'attr-validate': true,
 		'button-req-content' : true,
 		'class-no-dup': true,
@@ -29,7 +29,7 @@ module.exports = {
 		'id-class-style' : false,
 		'id-no-dup': true,
 		'id-style' : [true, 'bem'],
-		'img-req-alt': true,
+		'img-req-alt': [true, 'allownull'],
 		'img-req-src': true,
 		'indent-style': [
 			true,
@@ -56,7 +56,6 @@ module.exports = {
 		'tag-req-attr' : [true, {
 			'img': [
 				{'name': 'src'},
-				{'name': 'alt'},
 				{'name': 'width'},
 				{'name': 'height'}
 			]}],
