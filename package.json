@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/htmlacademy/linthtml-config-htmlacademy#readme",
   "devDependencies": {
-    "@linthtml/linthtml": "0.7.2"
+    "@linthtml/linthtml": "0.8.0"
   }
 }
