@@ -25,7 +25,7 @@ npm install linthtml-config-htmlacademy -D
 
 ```json
 {
-  "extends": "linthtml-config-recommended",
+  "extends": "linthtml-config-htmlacademy",
   "rules": {
     "line-max-len": [
       true,
