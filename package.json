@@ -17,7 +17,7 @@
     "url": "https://github.com/htmlacademy/linthtml-config-htmlacademy/issues"
   },
   "homepage": "https://github.com/htmlacademy/linthtml-config-htmlacademy#readme",
-  "devDependencies": {
-    "@linthtml/linthtml": "0.8.0"
+  "dependencies": {
+    "@linthtml/linthtml": "0.9.5"
   }
 }
