@@ -13,7 +13,7 @@ module.exports = {
 				'aria-label', 'aria-labelledby', 'aria-describedby', 'style']
 		}],
 		'attr-bans': false,
-		'attr-name-style': false,
+		'attr-name-style': [true, 'dash'],
 		'attr-new-line' : [true, 6],
 		'attr-no-dup': true,
 		'attr-no-unsafe-char': true,
@@ -36,7 +36,7 @@ module.exports = {
 		'html-valid-content-model': true,
 		'id-class-no-ad' : false,
 		'id-class-style' : false,
-		'id-no-dup': true,
+		'id-no-dup': false, // fixme правило сломано в последней версии линтера ждем https://github.com/linthtml/linthtml/issues/469
 		'id-style' : [true, 'bem'],
 		'img-req-alt': [true, 'allownull'],
 		'img-req-src': true,
