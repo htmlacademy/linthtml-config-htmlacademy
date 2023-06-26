@@ -4,7 +4,7 @@
   "description": "HTML Academy LintHTML config",
   "main": "index.js",
   "scripts": {
-    "test": "linthtml test/*.html --config index.js"
+    "lint": "linthtml test/*.html --config index.js"
   },
   "repository": {
     "type": "git",
