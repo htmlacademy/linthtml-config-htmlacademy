@@ -2,7 +2,16 @@ module.exports = {
 	'id-class-ignore-regex' : false,
 	'line-max-len-ignore-regex': false,
 	'spec-char-escape' : false,
+	'plugins': ['linthtml-rules-htmlacademy'],
+	'attr-name-ignore-regex': '/viewBox|preserveAspectRatio/',
 	'rules': {
+		'htmlacademy/class-first': true,
+		'htmlacademy/head-req-meta': true,
+		'htmlacademy/attr-value-style': [true, {
+			style: 'dash',
+			ignore: ['d', 'xmlns', 'fill', 'placeholder', 'value', 'action', 'href', 'alt', 'src', 'type',
+				'aria-label', 'aria-labelledby', 'aria-describedby', 'style']
+		}],
 		'attr-bans': false,
 		'attr-name-style': false,
 		'attr-new-line' : [true, 6],
