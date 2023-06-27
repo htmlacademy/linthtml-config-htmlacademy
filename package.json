@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/htmlacademy/linthtml-config-htmlacademy#readme",
   "dependencies": {
-    "@linthtml/linthtml": "0.9.5"
+    "@linthtml/linthtml": "0.9.5",
+    "linthtml-rules-htmlacademy": "1.0.1"
   }
 }
