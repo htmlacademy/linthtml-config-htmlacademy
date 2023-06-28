@@ -1,5 +1,9 @@
 # История изменений
 
+## 1.0.6
+- обновили linthtml-rules-htmlacademy 1.0.2
+- удалили `htmlacademy/attr-value-style`
+
 ## 1.0.5
 - Обновили зависимости до актуальных версий
 - Добавили linthtml-rules-htmlacademy
