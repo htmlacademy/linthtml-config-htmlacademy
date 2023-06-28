@@ -7,11 +7,6 @@ module.exports = {
 	'rules': {
 		'htmlacademy/class-first': true,
 		'htmlacademy/head-req-meta': true,
-		'htmlacademy/attr-value-style': [true, {
-			style: 'dash',
-			ignore: ['d', 'xmlns', 'fill', 'placeholder', 'value', 'action', 'href', 'alt', 'src', 'type',
-				'aria-label', 'aria-labelledby', 'aria-describedby', 'style']
-		}],
 		'attr-bans': false,
 		'attr-name-style': [true, 'dash'],
 		'attr-new-line' : [true, 6],
