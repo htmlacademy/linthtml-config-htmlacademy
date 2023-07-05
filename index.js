@@ -7,6 +7,11 @@ module.exports = {
 	'rules': {
 		'htmlacademy/class-first': true,
 		'htmlacademy/head-req-meta': true,
+		'htmlacademy/charset-position': true,
+		'htmlacademy/form-action-attribute': true,
+		'htmlacademy/img-svg-req-dimensions': true,
+		'htmlacademy/no-double-br': true,
+		'htmlacademy/a-target-rel': true,
 		'attr-bans': false,
 		'attr-name-style': [true, 'dash'],
 		'attr-new-line' : [true, 6],
@@ -57,12 +62,6 @@ module.exports = {
 		'tag-close': true,
 		'tag-name-lowercase': true,
 		'tag-name-match': true,
-		'tag-req-attr' : [true, {
-			'img': [
-				{'name': 'src'},
-				{'name': 'width'},
-				{'name': 'height'}
-			]}],
 		'tag-self-close' : false,
 		'title-max-len': false,
 		'title-no-dup': true,
