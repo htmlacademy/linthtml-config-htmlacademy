@@ -41,10 +41,6 @@ module.exports = {
 		'id-style' : false,
 		'img-req-alt': [true, 'allownull'],
 		'img-req-src': true,
-		'indent-style': [
-			true,
-			'spaces'
-		],
 		'indent-width': false,
 		'input-btn-req-value-or-title' : true,
 		'input-radio-req-name': true,
