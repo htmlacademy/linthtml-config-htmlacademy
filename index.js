@@ -5,8 +5,15 @@ module.exports = {
 	'plugins': ['linthtml-rules-htmlacademy'],
 	'attr-name-ignore-regex': '/viewBox|preserveAspectRatio/',
 	'rules': {
+		'htmlacademy/a-target-rel': true,
+		'htmlacademy/charset-position': true,
 		'htmlacademy/class-first': true,
-		'htmlacademy/head-req-meta': true,
+		'htmlacademy/form-action-attribute': true,
+		'htmlacademy/head-meta-charset': true,
+		'htmlacademy/img-svg-req-dimensions': true,
+		'htmlacademy/no-double-br': true,
+		'htmlacademy/req-charset-utf': true,
+
 		'attr-bans': false,
 		'attr-name-style': [true, 'dash'],
 		'attr-new-line' : [true, 6],
@@ -32,13 +39,10 @@ module.exports = {
 		'id-class-no-ad' : false,
 		'id-class-style' : false,
 		'id-no-dup': false, // fixme правило сломано в последней версии линтера ждем https://github.com/linthtml/linthtml/issues/469
-		'id-style' : [true, 'bem'],
+		'id-style' : false,
 		'img-req-alt': [true, 'allownull'],
 		'img-req-src': true,
-		'indent-style': [
-			true,
-			'spaces'
-		],
+		'indent-style': false,
 		'indent-width': false,
 		'input-btn-req-value-or-title' : true,
 		'input-radio-req-name': true,
@@ -48,21 +52,17 @@ module.exports = {
 		'lang-style' : [true, 'case'],
 		'line-end-style' : false,
 		'line-max-len': false,
-		'line-no-trailing-whitespace': true,
+		'line-no-trailing-whitespace': false,
 		'link-min-length-4' : false,
-		'link-req-noopener': true,
+		'spec-char-escape': true,
+		'link-req-noopener': false,
 		'table-req-caption' : false,
 		'table-req-header' : false,
 		'tag-bans': false,
 		'tag-close': true,
 		'tag-name-lowercase': true,
 		'tag-name-match': true,
-		'tag-req-attr' : [true, {
-			'img': [
-				{'name': 'src'},
-				{'name': 'width'},
-				{'name': 'height'}
-			]}],
+		'tag-req-attr': false,
 		'tag-self-close' : false,
 		'title-max-len': false,
 		'title-no-dup': true,
