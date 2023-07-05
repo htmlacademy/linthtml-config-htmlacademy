@@ -12,6 +12,7 @@ module.exports = {
 		'htmlacademy/img-svg-req-dimensions': true,
 		'htmlacademy/no-double-br': true,
 		'htmlacademy/a-target-rel': true,
+
 		'attr-bans': false,
 		'attr-name-style': [true, 'dash'],
 		'attr-new-line' : [true, 6],
@@ -37,7 +38,7 @@ module.exports = {
 		'id-class-no-ad' : false,
 		'id-class-style' : false,
 		'id-no-dup': false, // fixme правило сломано в последней версии линтера ждем https://github.com/linthtml/linthtml/issues/469
-		'id-style' : [true, 'bem'],
+		'id-style' : false,
 		'img-req-alt': [true, 'allownull'],
 		'img-req-src': true,
 		'indent-style': [
