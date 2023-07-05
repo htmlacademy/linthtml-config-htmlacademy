@@ -5,13 +5,14 @@ module.exports = {
 	'plugins': ['linthtml-rules-htmlacademy'],
 	'attr-name-ignore-regex': '/viewBox|preserveAspectRatio/',
 	'rules': {
-		'htmlacademy/class-first': true,
-		'htmlacademy/head-req-meta': true,
+		'htmlacademy/a-target-rel': true,
 		'htmlacademy/charset-position': true,
+		'htmlacademy/class-first': true,
 		'htmlacademy/form-action-attribute': true,
+		'htmlacademy/head-meta-charset': true,
 		'htmlacademy/img-svg-req-dimensions': true,
 		'htmlacademy/no-double-br': true,
-		'htmlacademy/a-target-rel': true,
+		'htmlacademy/req-charset-utf': true,
 
 		'attr-bans': false,
 		'attr-name-style': [true, 'dash'],
