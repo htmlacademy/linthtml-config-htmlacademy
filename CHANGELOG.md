@@ -2,6 +2,7 @@
 
 ## 1.0.7
 - Update linthtml-rules-htmlacademy
+- Adds htmlacademy rules
 
 ## 1.0.6
 - обновили linthtml-rules-htmlacademy 1.0.2
