@@ -8,6 +8,7 @@
 - Remove `line-no-trailing-whitespace`
 - Remove `link-req-noopener`
 - Adds `spec-char-escape`
+- Fixed `head-meta-charset`
 
 ## 1.0.6
 - обновили linthtml-rules-htmlacademy 1.0.2
