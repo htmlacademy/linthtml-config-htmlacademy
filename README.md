@@ -1,3 +1,7 @@
+<div align="center">
+    <img src="./assets/logo.png" alt="Tangerine" />
+</div>
+
 # linthtml-config-htmlacademy
 > Это стандартный конфигурационный файл для linthtml от [HTML Academy](https://htmlacademy.ru/).
 
