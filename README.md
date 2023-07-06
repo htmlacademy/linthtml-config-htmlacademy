@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="./assets/logo.png" alt="Tangerine" />
+    <img width="185" height="180" src="./assets/logo.png" alt="logo linthtml-config-htmlacademy" />
 </div>
 
 # linthtml-config-htmlacademy
