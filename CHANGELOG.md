@@ -1,5 +1,20 @@
 # История изменений
 
+## 1.0.8
+- Update linthtml-rules-htmlacademy
+- Adds new rule `htmlacademy/section-has-heading`
+```html
+ <section>
+  <h2>title</h2>
+</section>
+
+ <section>
+   <div>
+      <h2>title</h2>
+   </div>
+</section>
+```
+
 ## 1.0.7
 - Update linthtml-rules-htmlacademy
 - Adds htmlacademy rules
