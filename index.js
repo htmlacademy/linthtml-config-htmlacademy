@@ -13,6 +13,7 @@ module.exports = {
 		'htmlacademy/img-svg-req-dimensions': true,
 		'htmlacademy/no-double-br': true,
 		'htmlacademy/req-charset-utf': true,
+		'htmlacademy/section-has-heading': true,
 
 		'attr-bans': false,
 		'attr-name-style': [true, 'dash'],
