@@ -97,6 +97,11 @@ module.exports = {
 						name: 'type'
 					},
 				],
+				'a': [
+					{
+						name: 'href'
+					},
+				],
 			}
 		],
 		'tag-self-close' : [true, 'never'],
