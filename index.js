@@ -105,7 +105,10 @@ module.exports = {
 				],
 				'svg': [
 					{
-						name: 'href'
+						name: 'role'
+					},
+					{
+						name: 'aria-label'
 					},
 				],
 			}
