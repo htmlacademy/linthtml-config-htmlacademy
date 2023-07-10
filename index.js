@@ -54,7 +54,8 @@ module.exports = {
 		'lang-style' : [true, 'case'],
 		'line-end-style' : false,
 		'line-max-len': false,
-		'line-no-trailing-whitespace': false,
+		'line-no-trailing-whitespace': true,
+		'no-surrounding-whitespace': true,
 		'link-min-length-4' : true,
 		'spec-char-escape': false,
 		'link-req-noopener': false,
@@ -98,6 +99,11 @@ module.exports = {
 					},
 				],
 				'a': [
+					{
+						name: 'href'
+					},
+				],
+				'svg': [
 					{
 						name: 'href'
 					},
