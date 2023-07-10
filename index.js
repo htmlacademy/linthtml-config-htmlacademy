@@ -14,6 +14,7 @@ module.exports = {
 		'htmlacademy/no-double-br': true,
 		'htmlacademy/req-charset-utf': true,
 		'htmlacademy/section-has-heading': true,
+		'htmlacademy/attr-req-value': [true, { ignore: ['alt']}],
 
 		'attr-bans': false,
 		'attr-name-style': [true, 'dash'],
