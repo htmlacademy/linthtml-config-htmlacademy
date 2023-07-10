@@ -64,7 +64,26 @@ module.exports = {
 		'tag-close': true,
 		'tag-name-lowercase': true,
 		'tag-name-match': true,
-		'tag-req-attr': false,
+		'tag-req-attr': [
+			true,
+			{
+				'input': [
+					{
+						name: 'name'
+					},
+				],
+				'select': [
+					{
+						name: 'name'
+					},
+				],
+				'textarea': [
+					{
+						name: 'name'
+					},
+				],
+			}
+		],
 		'tag-self-close' : [true, 'never'],
 		'title-max-len': false,
 		'title-no-dup': true,
