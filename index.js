@@ -92,6 +92,11 @@ module.exports = {
 						name: 'type'
 					},
 				],
+				'button': [
+					{
+						name: 'type'
+					},
+				],
 			}
 		],
 		'tag-self-close' : [true, 'never'],
