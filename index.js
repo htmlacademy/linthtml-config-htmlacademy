@@ -82,6 +82,11 @@ module.exports = {
 						name: 'name'
 					},
 				],
+				'time': [
+					{
+						name: 'datetime'
+					},
+				],
 			}
 		],
 		'tag-self-close' : [true, 'never'],
