@@ -11,11 +11,11 @@
     <header class="header header--catalog-page">
       <div class="container">
         <nav class="header__nav nav">
-          <a class="nav__logo logo" href="index.html">
+          <a class="nav__logo logo" href="index.html" aria-label="Обновить страницу">
             <img src="./img/logo_device.svg" width="163" height="35" alt="логотип интернет-магазина Девайс">
           </a>
 
-          <form class="nav__search search" action="https://echo.htmlacademy.ru" method="get" id="header-search">
+          <form class="nav__search search" action="https://echo.htmlacademy.ru" method="get">
             <input class="search__input" name="header-search" type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
             <button class="search__button" type="submit">Найти</button>
           </form>
@@ -40,7 +40,7 @@
 
           <ul class="nav__menu menu">
             <li class="menu__item menu__item--catalog">
-              <button class="menu__link menu__link--catalog" aria-haspopup="true">Каталог товаров</button>
+              <button class="menu__link menu__link--catalog" type="button" aria-haspopup="true">Каталог товаров</button>
               <div class="wrapper-catalog-menu">
                 <ul class="catalog-menu">
                   <li class="catalog-menu__item">
@@ -84,7 +84,7 @@
             <a class="breadcrumbs__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link">Моноподы для селфи</a>
+            <a class="breadcrumbs__link" href="#">Моноподы для селфи</a>
           </li>
         </ul>
       </div>
@@ -173,7 +173,7 @@
 
             <ul class="sorting__list">
               <li class="sorting__item">
-                <a class="sorting__link sorting__link--price sorting__link--current" aria-label="Сортировать по цене.">По цене</a>
+                <a class="sorting__link sorting__link--price sorting__link--current" href="catalog.html" aria-label="Сортировать по цене.">По цене</a>
               </li>
               <li class="sorting__item">
                 <a class="sorting__link sorting__link--type" href="#" aria-label="Сортировать по типу.">По типу</a>
@@ -249,16 +249,16 @@
           <div class="catalog__pagination">
             <ul class="pagination">
               <li class="pagination__item pagination__item--prev">
-                <a class="pagination__link pagination__link--prev">Назад</a>
+                <a class="pagination__link pagination__link--prev" href="catalog.html" aria-label="Перейти на страницу номер">Назад</a>
               </li>
               <li class="pagination__item">
-                <a class="pagination__link pagination__link--current">1</a>
+                <a class="pagination__link pagination__link--current" href="catalog.html" aria-label="Перейти на страницу номер">1</a>
               </li>
               <li class="pagination__item">
-                <a class="pagination__link" href="catalog.html">2</a>
+                <a class="pagination__link" href="catalog.html" aria-label="Перейти на страницу номер">2</a>
               </li>
               <li class="pagination__item">
-                <a class="pagination__link" href="catalog.html">3</a>
+                <a class="pagination__link" href="catalog.html" aria-label="Перейти на страницу номер">3</a>
               </li>
               <li class="pagination__item pagination__item--next">
                 <a class="pagination__link pagination__link--next" href="catalog.html">Вперед</a>
@@ -272,7 +272,7 @@
 
     <footer class="footer">
       <div class="footer-container container">
-        <a class="footer__logo logo logo--footer" href="index.html">
+        <a class="footer__logo logo logo--footer" href="index.html" aria-label="Обновить страницу">
           <img src="img/logo_device-footer.svg" width="163" height="35" alt="логотип интернет-магазина Девайс">
         </a>
 

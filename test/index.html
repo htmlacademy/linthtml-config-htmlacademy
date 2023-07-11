@@ -12,7 +12,7 @@
     <header class="header">
       <div class="container">
         <nav class="header__nav nav">
-          <a class="nav__logo logo">
+          <a class="nav__logo logo" href="index.html" aria-label="Обновить страницу">
             <img src="./img/logo_device.svg" width="163" height="35" alt="логотип интернет-магазина Девайс">
           </a>
 
@@ -39,7 +39,7 @@
 
           <ul class="nav__menu menu">
             <li class="menu__item menu__item--catalog">
-              <button class="menu__link menu__link--catalog" aria-haspopup="true">Каталог товаров</button>
+              <button class="menu__link menu__link--catalog" type="button" aria-haspopup="true">Каталог товаров</button>
               <div class="wrapper-catalog-menu">
                 <ul class="catalog-menu">
                   <li class="catalog-menu__item">
@@ -231,22 +231,22 @@
 
           <ul class="logotypes__list">
             <li class="logotypes__item">
-              <a class="logotypes__link" href="catalog.html">
+              <a class="logotypes__link" href="catalog.html" aria-label="Узнайть больше о компании">
                 <img class="logotypes__image" src="./img/logo_dji.png" width="260" height="100" alt="логотип компании DJI">
               </a>
             </li>
             <li class="logotypes__item">
-              <a class="logotypes__link" href="catalog.html">
+              <a class="logotypes__link" href="catalog.html" aria-label="Узнайть больше о компании">
                 <img class="logotypes__image" src="./img/logo_spgadgets.png" width="260" height="100" alt="логотип компании SP Gadgets">
               </a>
             </li>
             <li class="logotypes__item">
-              <a class="logotypes__link" href="catalog.html">
+              <a class="logotypes__link" href="catalog.html" aria-label="Узнайть больше о компании">
                 <img class="logotypes__image" src="./img/logo_gopro.png"  width="260" height="100" alt="логотип компании Go Pro">
               </a>
             </li>
             <li class="logotypes__item">
-              <a class="logotypes__link" href="catalog.html">
+              <a class="logotypes__link" href="catalog.html" aria-label="Узнайть больше о компании">
                 <img class="logotypes__image" src="./img/logo_vive.png" width="260" height="100" alt="логотип компании Vive">
               </a>
             </li>
@@ -273,7 +273,7 @@
             <h3 class="contacts__title headline">Контакты</h3>
             <p class="contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 
-            <a class="contacts__map map" href="ouroffice.html" target="_blank" rel="noopener noreferrer">
+            <a class="contacts__map map" href="ouroffice.html" target="_blank" rel="noopener noreferrer" aria-label="Узнайте как добраться до офиса">
               <img class="map__image" src="./img/map-small.jpg" width="560" height="222" alt="как добраться до офиса по адресу: Москва, улица Строителей, 15">
             </a>
 
@@ -285,7 +285,7 @@
 
     <footer class="footer">
       <div class="footer-container container">
-        <a class="footer__logo logo logo--footer">
+        <a class="footer__logo logo logo--footer" href="#" aria-label="Обновить страницу">
           <img src="img/logo_device-footer.svg" width="163" height="35" alt="логотип интернет-магазина Девайс">
         </a>
 
@@ -373,23 +373,21 @@
             </p>
 
             <p class="write-us-form__field write-us-form__field--text">
-              <label class="write-us-form__label">
-                Текст письма:
-                <textarea class="write-us-form__input write-us-form__input--textarea" name="message" wrap="soft" placeholder="В свободной форме"></textarea>
-              </label>
+              <label class="write-us-form__label" for="write-us">Текст письма:</label>
+              <textarea class="write-us-form__input write-us-form__input--textarea" id="write-us" name="message" wrap="soft" placeholder="В свободной форме"></textarea>
             </p>
           </div>
         </fieldset>
         <button class="write-us-form__submit more-btn button-submit" type="submit">Отправить</button>
       </form>
-      <button class="modal__close close-btn close-btn--write-us" aria-label="Закрыть окно"></button>
+      <button class="modal__close close-btn close-btn--write-us" type="button" aria-label="Закрыть окно"></button>
     </section>
 
     <section class="modal modal--map">
       <h2 class="visually-hidden">Карта проезда</h2>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1123749473504!2d37.527429315875956!3d55.6870340045301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1604005884930!5m2!1sru!2sru" width="960" height="560" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       <img class="modal__plug" src="./img/map-big.png" width="960" height="560" alt="как к нам проехать">
-      <button class="modal__close close-btn close-btn--map" aria-label="Закрыть окно"></button>
+      <button class="modal__close close-btn close-btn--map" type="button" aria-label="Закрыть окно"></button>
     </section>
 
     <script src="./js/script.min.js"></script>
