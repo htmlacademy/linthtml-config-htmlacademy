@@ -27,7 +27,7 @@ module.exports = {
 		'attr-validate': true,
 		'button-req-content' : true,
 		'class-no-dup': true,
-		'class-style' : [true, 'dash'],
+		'class-style' : false, // [true, 'dash'] для html-1 и [true, 'bem'] для html-2
 		'doctype-first': true,
 		'doctype-html5': true,
 		'fieldset-contains-legend' : true,
