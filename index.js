@@ -39,6 +39,7 @@ module.exports = {
     'htmlacademy/attr-delimiter': true,
     'htmlacademy/req-single-styles': true,
     'htmlacademy/req-head-styles': true,
+    'htmlacademy/req-meta-viewport': true,
 
     'attr-bans': false,
     'attr-name-style': [true, 'dash'],
