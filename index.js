@@ -34,6 +34,7 @@ module.exports = {
     ],
     'htmlacademy/link-req-content': true,
     'htmlacademy/aria-label-misuse': true,
+    'htmlacademy/no-blocking-script': true,
 
     'attr-bans': false,
     'attr-name-style': [true, 'dash'],
