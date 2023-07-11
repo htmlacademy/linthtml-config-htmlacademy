@@ -40,6 +40,7 @@ module.exports = {
     'htmlacademy/req-single-styles': true,
     'htmlacademy/req-head-styles': true,
     'htmlacademy/req-meta-viewport': true,
+    'htmlacademy/ban-url-spaces': true,
 
     'attr-bans': false,
     'attr-name-style': [true, 'dash'],
