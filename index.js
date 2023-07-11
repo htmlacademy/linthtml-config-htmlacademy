@@ -15,6 +15,7 @@ module.exports = {
 		'htmlacademy/req-charset-utf': true,
 		'htmlacademy/section-has-heading': true,
 		'htmlacademy/attr-req-value': [true, { ignore: ['alt']}],
+		'htmlacademy/tag-name-lowercase': [true, { ignore: ['clipPath', 'textPath', 'linearGradient', 'radialGradient']}],
 
 		'attr-bans': false,
 		'attr-name-style': [true, 'dash'],
@@ -63,7 +64,7 @@ module.exports = {
 		'table-req-header' : false,
 		'tag-bans': [true, 'style'],
 		'tag-close': true,
-		'tag-name-lowercase': true,
+		'tag-name-lowercase': false,
 		'tag-name-match': true,
 		'tag-req-attr': [
 			true,
