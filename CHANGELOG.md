@@ -1,5 +1,74 @@
 # История изменений
 
+## 1.0.9
+- Update linthtml-rules-htmlacademy
+- Adds new rule `htmlacademy/attr-req-value`: the attribute cannot be empty, except for the list from ignore
+
+```js
+{
+  'htmlacademy/attr-req-value': [true, { ignore: ['alt']}]
+}
+```
+
+```html
+<button class="foo"></button>
+<button disabled></button>
+<img src="images/image.jpg" width="100" height="100" alt="">
+```
+- Disabled rules: 
+  - `'class-style'`
+  - `'spec-char-escape'`
+- Enabled: 
+  - `'id-style' : [true, 'dash'],`
+  - `'input-req-label'`
+  - `'label-no-enc-textarea-or-select'`
+  - `'no-surrounding-whitespace'`
+  - `'link-min-length-4'`
+  - `'tag-self-close' : [true, 'never']`
+- Adds:
+```js
+'tag-req-attr': [
+  true,
+  {
+    'input': [
+      {
+        name: 'name'
+      },
+    ],
+    'select': [
+      {
+        name: 'name'
+      },
+    ],
+    'textarea': [
+      {
+        name: 'name'
+      },
+    ],
+    'time': [
+      {
+        name: 'datetime'
+      },
+    ],
+    'source': [
+      {
+        name: 'type'
+      },
+    ],
+    'button': [
+      {
+        name: 'type'
+      },
+    ],
+    'a': [
+      {
+        name: 'href'
+      },
+    ],
+  }
+],
+```
+
 ## 1.0.8
 - Update linthtml-rules-htmlacademy
 - Adds new rule `htmlacademy/section-has-heading`
