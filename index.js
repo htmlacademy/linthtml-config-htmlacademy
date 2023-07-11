@@ -61,7 +61,7 @@ module.exports = {
 		'link-req-noopener': false,
 		'table-req-caption' : false,
 		'table-req-header' : false,
-		'tag-bans': false,
+		'tag-bans': [true, 'style'],
 		'tag-close': true,
 		'tag-name-lowercase': true,
 		'tag-name-match': true,
