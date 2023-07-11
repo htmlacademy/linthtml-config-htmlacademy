@@ -33,6 +33,7 @@ module.exports = {
       },
     ],
     'htmlacademy/link-req-content': true,
+    'htmlacademy/aria-label-misuse': true,
 
     'attr-bans': false,
     'attr-name-style': [true, 'dash'],
