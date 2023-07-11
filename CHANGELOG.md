@@ -18,7 +18,7 @@
 - Disabled rules: 
   - `'class-style'`
   - `'spec-char-escape'`
-- Enabled: 
+- Enabled rules: 
   - `'id-style' : [true, 'dash'],`
   - `'input-req-label'`
   - `'label-no-enc-textarea-or-select'`
