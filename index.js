@@ -103,14 +103,6 @@ module.exports = {
 						name: 'href'
 					},
 				],
-				'svg': [
-					{
-						name: 'role'
-					},
-					{
-						name: 'aria-label'
-					},
-				],
 			}
 		],
 		'tag-self-close' : [true, 'never'],
