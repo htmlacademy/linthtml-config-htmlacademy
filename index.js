@@ -37,6 +37,8 @@ module.exports = {
     'htmlacademy/no-blocking-script': true,
     'htmlacademy/no-px-size': true,
     'htmlacademy/attr-delimiter': true,
+    'htmlacademy/req-single-styles': true,
+    'htmlacademy/req-head-styles': true,
 
     'attr-bans': false,
     'attr-name-style': [true, 'dash'],
