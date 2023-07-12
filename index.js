@@ -43,6 +43,7 @@ module.exports = {
     'htmlacademy/ban-url-spaces': true,
     'htmlacademy/id-no-dup': true,
     'htmlacademy/input-req-label': true,
+    'htmlacademy/tag-self-close': true,
 
     'attr-bans': false,
     'attr-name-style': [true, 'dash'],
