@@ -42,6 +42,7 @@ module.exports = {
     'htmlacademy/req-meta-viewport': true,
     'htmlacademy/ban-url-spaces': true,
     'htmlacademy/id-no-dup': true,
+    'htmlacademy/input-req-label': true,
 
     'attr-bans': false,
     'attr-name-style': [true, 'dash'],
