@@ -2,22 +2,28 @@
 
 ## 1.0.9
 - Update linthtml-rules-htmlacademy
-- Adds new rule `htmlacademy/attr-req-value`: the attribute cannot be empty, except for the list from ignore
-
-```js
-{
-  'htmlacademy/attr-req-value': [true, { ignore: ['alt']}]
-}
-```
-
-```html
-<button class="foo"></button>
-<button disabled></button>
-<img src="images/image.jpg" width="100" height="100" alt="">
-```
+- Sorted htmlacademy rules
+- Added so many new rules:
+  - `htmlacademy/attr-req-value`
+  - `htmlacademy/aria-label-misuse`
+  - `htmlacademy/attr-delimiter`
+  - `htmlacademy/attribute-allowed-values`
+  - `htmlacademy/ban-url-spaces`
+  - `htmlacademy/id-no-dup`
+  - `htmlacademy/input-req-label`
+  - `htmlacademy/link-req-content`
+  - `htmlacademy/no-blocking-script`
+  - `htmlacademy/no-px-size`
+  - `htmlacademy/req-head-styles`
+  - `htmlacademy/req-meta-viewport`
+  - `htmlacademy/req-single-styles`
+  - `htmlacademy/tag-name-lowercase`
+  - `htmlacademy/tag-self-close`
 - Disabled rules: 
   - `'class-style'`
   - `'spec-char-escape'`
+  - `tag-self-close`
+  - `input-req-label`
 - Enabled rules: 
   - `'id-style' : [true, 'dash'],`
   - `'input-req-label'`
@@ -27,46 +33,48 @@
   - `'tag-self-close' : [true, 'never']`
 - Adds:
 ```js
-'tag-req-attr': [
-  true,
-  {
-    'input': [
-      {
-        name: 'name'
-      },
-    ],
-    'select': [
-      {
-        name: 'name'
-      },
-    ],
-    'textarea': [
-      {
-        name: 'name'
-      },
-    ],
-    'time': [
-      {
-        name: 'datetime'
-      },
-    ],
-    'source': [
-      {
-        name: 'type'
-      },
-    ],
-    'button': [
-      {
-        name: 'type'
-      },
-    ],
-    'a': [
-      {
-        name: 'href'
-      },
-    ],
-  }
-],
+{
+  'tag-req-attr': [
+    true,
+    {
+      'input': [
+        {
+          name: 'name'
+        },
+      ],
+      'select': [
+        {
+          name: 'name'
+        },
+      ],
+      'textarea': [
+        {
+          name: 'name'
+        },
+      ],
+      'time': [
+        {
+          name: 'datetime'
+        },
+      ],
+      'source': [
+        {
+          name: 'type'
+        },
+      ],
+      'button': [
+        {
+          name: 'type'
+        },
+      ],
+      'a': [
+        {
+          name: 'href'
+        },
+      ],
+    }
+  ]
+}
 ```
 
 ## 1.0.8
