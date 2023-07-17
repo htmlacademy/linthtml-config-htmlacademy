@@ -8,12 +8,12 @@
 ## Установка
 
 ```bash
-npm install linthtml-config-htmlacademy -D
+npm install @linthtml/linthtml linthtml-config-htmlacademy -D
 ```
 
 ## Использование
 
-Если вы установили `linthtml-config-htmlacademy` локально в свой проект, то просто примените его в конфигурационном файле `.linthtml` вашего проекта:
+Когда вы установили `linthtml-config-htmlacademy` локально в свой проект, примените его в конфигурационном файле `.linthtmlrc` вашего проекта:
 
 ```json
 {
@@ -38,3 +38,11 @@ npm install linthtml-config-htmlacademy -D
   }
 }
 ```
+
+
+## Использование в VS Code
+Чтобы VS Code начал подсвечивать ошибки в HTML-разметке, установите плагин [LintHTML](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-linthtml).
+
+> Обязательно убедитесь, что файл настроек называется `.linthtmlrc`, так как это обязательное [требование плагина](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-linthtml#:~:text=If%20you%20have%20a%20valid%20hmllint%20configuration%20file).
+
+![](assets/vs-code-report.png)
