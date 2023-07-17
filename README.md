@@ -13,7 +13,7 @@ npm install @linthtml/linthtml linthtml-config-htmlacademy -D
 
 ## Использование
 
-Если вы установили `linthtml-config-htmlacademy` локально в свой проект, то просто примените его в конфигурационном файле `.linthtmlrc` вашего проекта:
+Когда вы установили `linthtml-config-htmlacademy` локально в свой проект, примените его в конфигурационном файле `.linthtmlrc` вашего проекта:
 
 ```json
 {
