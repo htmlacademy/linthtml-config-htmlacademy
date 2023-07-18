@@ -39,6 +39,8 @@ npm install @linthtml/linthtml linthtml-config-htmlacademy -D
 }
 ```
 
+## Правила
+Для проекта добавляются кастомные правила от [HTML Academy](https://htmlacademy.ru/), которые лежат в отдельном репозитории [linthtml-rules-htmlacademy](https://github.com/htmlacademy/linthtml-rules-htmlacademy).
 
 ## Использование в VS Code
 Чтобы VS Code начал подсвечивать ошибки в HTML-разметке, установите плагин [LintHTML](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-linthtml).

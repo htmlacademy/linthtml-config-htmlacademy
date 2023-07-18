@@ -1,5 +1,8 @@
 # История изменений
 
+## 1.0.10
+Fixed `req-charset-utf` rule
+
 ## 1.0.9
 - Update linthtml-rules-htmlacademy
 - Sorted htmlacademy rules
