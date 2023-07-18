@@ -85,7 +85,7 @@ module.exports = {
     'line-max-len': false,
     'line-no-trailing-whitespace': false,
     'no-surrounding-whitespace': true,
-    'link-min-length-4': true,
+    'link-min-length-4': false,
     'spec-char-escape': false,
     'link-req-noopener': false,
     'table-req-caption': false,
