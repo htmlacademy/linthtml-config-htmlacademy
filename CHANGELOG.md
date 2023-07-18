@@ -1,5 +1,15 @@
 # История изменений
 
+## 1.0.11
+Disabled `link-min-length-4`
+
+This rule triggered for a good example
+```html
+<a class="logo" href="markup-4-index.html">
+  <img src="img/logo.svg" width="63" height="52" alt="Логотип сайта гостиницы для котов и кошек Котейка">
+</a>
+```
+
 ## 1.0.10
 Fixed `req-charset-utf` rule
 
