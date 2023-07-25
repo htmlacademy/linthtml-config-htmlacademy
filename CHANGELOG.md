@@ -1,5 +1,8 @@
 # История изменений
 
+## 1.0.12
+Fixed regex in `attr-name-ignore-regex`
+
 ## 1.0.11
 Disabled `link-min-length-4`
 
