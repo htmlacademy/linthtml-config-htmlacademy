@@ -3,7 +3,7 @@ module.exports = {
   'line-max-len-ignore-regex': false,
   'spec-char-escape': false,
   'plugins': ['linthtml-rules-htmlacademy'],
-  'attr-name-ignore-regex': '/viewBox|preserveAspectRatio/',
+  'attr-name-ignore-regex': 'viewBox|preserveAspectRatio',
   'rules': {
     'htmlacademy/a-target-rel': true,
     'htmlacademy/aria-label-misuse': true,
