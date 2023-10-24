@@ -48,3 +48,16 @@ npm install @linthtml/linthtml linthtml-config-htmlacademy -D
 > Обязательно убедитесь, что файл настроек называется `.linthtmlrc`, так как это обязательное [требование плагина](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-linthtml#:~:text=If%20you%20have%20a%20valid%20hmllint%20configuration%20file).
 
 ![](assets/vs-code-report.png)
+
+## npm и cli
+Linthtml можно запускать в терминале. Для этого можно в секцию `"script"` в package.json добавить команду:
+```bash
+# package.json
+"script" {
+  "lint:html": "linthtml source/*.html --config .linthtmlrc"
+}
+```
+
+- `linthtml` - запустит проверку HTML-файлов.
+- `source/*.html` - поиск HTML-файлов в папке `source. 
+- `--config .linthtmlrc` - путь до конфигурационного файла. В проекте можно иметь несколько конфигурационных файлов.
