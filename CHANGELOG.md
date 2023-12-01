@@ -1,5 +1,8 @@
 # История изменений
 
+## 1.0.13
+Disabled `attr-new-line` rule
+
 ## 1.0.12
 Fixed regex in `attr-name-ignore-regex`
 
