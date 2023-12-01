@@ -47,7 +47,7 @@ module.exports = {
 
     'attr-bans': false,
     'attr-name-style': [true, 'dash'],
-    'attr-new-line': [true, 6],
+    'attr-new-line': false,
     'attr-no-dup': true,
     'attr-no-unsafe-char': true,
     'attr-order': false,
