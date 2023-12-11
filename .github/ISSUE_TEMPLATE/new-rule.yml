@@ -1,0 +1,53 @@
+name: 'Новое правило'
+description: 'Issue для предложения нового правила в линтер'
+title: 'Правило: '
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо, что нашли временем поделиться новым правилом
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Опишите коротко, что будет проверять правило своими словами
+      description: Проверяет наличие заголовка любого уровня в `<section>`.
+
+  - type: textarea
+    id: bad-example
+    attributes:
+      label: Напишите примеры кода, на которые правило должно выдавать ошибку
+      description: |
+        Без заголовка
+        ```html
+          <section>
+          <section>
+        ```
+
+  - type: textarea
+    id: good-example
+    attributes:
+      label: Напишите примеры кода, на которые правило не должно реагировать
+      description: |
+        C заголовком
+        ```html
+        <section>
+          <h2></h2>
+        <section>
+        ```
+        
+        С любой вложенностью
+        ```html
+        <section>
+          <div>
+            <h2></h2>
+          </div>
+        <section>
+        ```
+
+  - type: textarea
+    id: free
+    attributes:
+      label: Поле со свободным описанием.
+      description:  Добавьте сюда всё остальное, что хотели рассказать

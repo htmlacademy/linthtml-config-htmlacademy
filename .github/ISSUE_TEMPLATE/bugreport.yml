@@ -1,0 +1,37 @@
+name: 'Сообщение о проблеме'
+description: 'Issue для сообщения о проблеме или баге'
+title: 'Проблема: '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо, что помогаете улучшить наш проект! Пожалуйста, заполните следующую информацию:
+
+  - type: textarea
+    id: terminal-error
+    attributes:
+      label: Ошибка из терминала
+      description: |
+        ```bash
+        File: test/index.html
+          Config file: index.js
+          8:3  error  The <section> element must contain a heading of any level.  htmlacademy/section-has-heading  
+          ✖ 1 problem (1 error, 0 warning)
+        ```
+  - type: textarea
+    id: example
+    attributes:
+      label: Часть кода на котором произошла ошибка. Какая конфигурация использовалась
+      description: |
+        ```html
+        <section>
+          <h1>Title</h1>
+        </section>
+        ```
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Описание проблемы
+      description: Пожалуйста, подробно опишите проблему или баг. Опишите как воспроизвести баг
