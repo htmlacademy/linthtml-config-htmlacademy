@@ -1,5 +1,17 @@
 # История изменений
 
+## 1.0.14
+`attr-req-value` can now accept regex for ignore
+
+```js
+'htmlacademy/attr-req-value': [
+  true, 
+  { 
+    ignore: ['/^data/'] 
+  }
+],
+```
+
 ## 1.0.13
 Disabled `attr-new-line` rule
 
