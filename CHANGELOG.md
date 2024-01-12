@@ -1,5 +1,49 @@
 # История изменений
 
+## 1.0.15
+Added `htmlacademy/space-between-comments`
+```js
+rules: {
+  'htmlacademy/space-between-comments': [true, 'space' | 'no-space]
+}
+```
+
+This rule checks for spaces at the beginning and end of the comment block.
+
+## Options
+
+`string`: `"space"|"no-space"`
+
+## Value `space`
+If a comment has spaces at both the beginning and end of the comment block, it is compliant.
+
+The following patterns are considered problematic:
+```html
+<!-- Comment-->
+<!--Comment -->
+<!--Comment-->
+```
+
+The following patterns are **not** considered problems:
+```html
+<!-- Comment -->
+```
+
+## Value `no-space`
+If a comment has **no** spaces at both the beginning and end of the comment block, it is compliant.
+
+The following patterns are considered problematic:
+```html
+<!-- Comment-->
+<!--Comment -->
+<!-- Comment -->
+```
+
+The following patterns are **not** considered problems:
+```html
+<!--Comment-->
+```
+
 ## 1.0.14
 `attr-req-value` can now accept regex for ignore
 
