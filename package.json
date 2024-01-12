@@ -1,6 +1,6 @@
 {
   "name": "linthtml-config-htmlacademy",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "HTML Academy LintHTML config",
   "main": "index.js",
   "scripts": {
