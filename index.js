@@ -5,6 +5,7 @@ module.exports = {
   'plugins': ['linthtml-rules-htmlacademy'],
   'attr-name-ignore-regex': 'viewBox|preserveAspectRatio',
   'rules': {
+    'htmlacademy/space-between-comments': [true, 'space'],
     'htmlacademy/a-target-rel': true,
     'htmlacademy/aria-label-misuse': true,
     'htmlacademy/attr-delimiter': true,
