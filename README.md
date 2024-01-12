@@ -50,7 +50,7 @@ npm install @linthtml/linthtml linthtml-config-htmlacademy -D
 ![](assets/vs-code-report.png)
 
 ## npm и cli
-Linthtml можно запускать в терминале. Для этого можно в секцию `"script"` в package.json добавить команду:
+Linthtml можно запускать в терминале. Для этого можно в секцию `"script"` в `package.json` добавить команду:
 ```bash
 # package.json
 "script" {
@@ -59,5 +59,5 @@ Linthtml можно запускать в терминале. Для этого 
 ```
 
 - `linthtml` - запустит проверку HTML-файлов.
-- `source/*.html` - поиск HTML-файлов в папке `source. 
+- `source/*.html` - поиск HTML-файлов в папке `source`. 
 - `--config .linthtmlrc` - путь до конфигурационного файла. В проекте можно иметь несколько конфигурационных файлов.
