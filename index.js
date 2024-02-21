@@ -44,6 +44,48 @@ module.exports = {
     'htmlacademy/tag-name-lowercase': [true, {
       ignore: ['clipPath', 'textPath', 'linearGradient', 'radialGradient']
     }],
+    'htmlacademy/tag-req-attr': [
+      true, {
+        'input': [
+          {
+            name: 'name',
+            ignore: {
+              type: 'submit'
+            }
+          },
+        ],
+        'select': [
+          {
+            name: 'name',
+          },
+        ],
+        'textarea': [
+          {
+            name: 'name',
+          },
+        ],
+        'time': [
+          {
+            name: 'datetime',
+          },
+        ],
+        'source': [
+          {
+            name: 'type',
+          },
+        ],
+        'button': [
+          {
+            name: 'type',
+          },
+        ],
+        'a': [
+          {
+            name: 'href',
+          },
+        ],
+      },
+    ],
     'htmlacademy/tag-self-close': true,
 
     'attr-bans': false,
@@ -95,39 +137,6 @@ module.exports = {
     'tag-close': true,
     'tag-name-lowercase': false,
     'tag-name-match': true,
-    'tag-req-attr': [
-      true, {
-        'input': [
-          {
-            name: 'name',
-          },
-        ], 'select': [
-          {
-            name: 'name',
-          },
-        ], 'textarea': [
-          {
-            name: 'name',
-          },
-        ], 'time': [
-          {
-            name: 'datetime',
-          },
-        ], 'source': [
-          {
-            name: 'type',
-          },
-        ], 'button': [
-          {
-            name: 'type',
-          },
-        ], 'a': [
-          {
-            name: 'href',
-          },
-        ],
-      },
-    ],
     'tag-self-close': false,
     'title-max-len': false,
     'title-no-dup': true,
