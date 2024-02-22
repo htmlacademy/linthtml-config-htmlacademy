@@ -40,6 +40,7 @@ module.exports = {
     'htmlacademy/req-head-styles': true,
     'htmlacademy/req-meta-viewport': true,
     'htmlacademy/req-single-styles': true,
+    'htmlacademy/req-stylesheet-link': true,
     'htmlacademy/section-has-heading': true,
     'htmlacademy/tag-name-lowercase': [true, {
       ignore: ['clipPath', 'textPath', 'linearGradient', 'radialGradient']
