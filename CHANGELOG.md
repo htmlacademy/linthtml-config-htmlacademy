@@ -1,5 +1,19 @@
 # История изменений
 
+## 1.0.18
+Added a new rule [htmlacademy/req-stylesheet-link](https://github.com/htmlacademy/linthtml-rules-htmlacademy/blob/main/rules/req-stylesheet-link/README.md) that checks for a link tag with the `rel="stylesheet"` attribute inside the head tag.
+```json
+{
+  "htmlacademy/req-stylesheet-link": true
+}
+```
+
+```html
+<head>
+  <link rel="stylesheet" href="styles/style.css">
+</head> 
+```
+
 ## 1.0.17
 - Excludes the `<input type="submit">` check from the [input-req-label](rules/input-req-label/README.md) rule.
 - Adds `ignore` option for [tag-req-attr](rules/tag-req-attr/README.md)
