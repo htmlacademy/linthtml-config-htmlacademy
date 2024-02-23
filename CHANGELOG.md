@@ -1,5 +1,18 @@
 # История изменений
 
+## 1.0.19
+Added a new rule [htmlacademy/req-mailto](https://github.com/htmlacademy/linthtml-rules-htmlacademy/blob/main/rules/req-mailto/README.md), which requires `mailto:` for email-text links.
+```json
+{
+  "htmlacademy/req-mailto": true
+}
+```
+
+```html
+<a href="mailto:example@example.com">example@example.com</a>
+```
+
+
 ## 1.0.18
 Added a new rule [htmlacademy/req-stylesheet-link](https://github.com/htmlacademy/linthtml-rules-htmlacademy/blob/main/rules/req-stylesheet-link/README.md) that checks for a link tag with the `rel="stylesheet"` attribute inside the head tag.
 ```json
