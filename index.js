@@ -38,6 +38,7 @@ module.exports = {
     'htmlacademy/no-px-size': true,
     'htmlacademy/req-charset-utf': true,
     'htmlacademy/req-head-styles': true,
+    'htmlacademy/req-mailto': true,
     'htmlacademy/req-meta-viewport': true,
     'htmlacademy/req-single-styles': true,
     'htmlacademy/req-stylesheet-link': true,
