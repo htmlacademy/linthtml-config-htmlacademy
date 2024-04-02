@@ -1,5 +1,8 @@
 # История изменений
 
+## 1.0.20
+Updates the @linthtml/linthtml to the latest version
+
 ## 1.0.19
 Added a new rule [htmlacademy/req-mailto](https://github.com/htmlacademy/linthtml-rules-htmlacademy/blob/main/rules/req-mailto/README.md), which requires `mailto:` for email-text links.
 ```json
