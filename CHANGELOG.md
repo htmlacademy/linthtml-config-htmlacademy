@@ -1,4 +1,14 @@
-# История изменений
+# Changelog
+
+## 1.0.22
+Added a new rule [htmlacademy/req-source-width-height](https://github.com/htmlacademy/linthtml-rules-htmlacademy/blob/main/rules/req-source-width-height/README.md) that requires the `width` and `height` attributes of `<source>`, inside `<picture>`.
+
+```html
+<picture>
+  <source srcset="images/image-tablet.jpg" width="768" height="480" media="(min-width: 768px)">
+  <img src="images/image-mobile.jpg" width="320" height="148" alt="">
+</picture>
+```
 
 ## 1.0.21
 Clarifies the [no-blocking-script](rules/no-blocking-script/README.md) rule for the `<script>` tag. You can now add modules to `<head>`.
