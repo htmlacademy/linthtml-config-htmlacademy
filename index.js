@@ -89,6 +89,7 @@ module.exports = {
       },
     ],
     'htmlacademy/tag-self-close': true,
+    'htmlacademy/req-source-width-height': true,
 
     'attr-bans': false,
     'attr-name-style': [true, 'dash'],
