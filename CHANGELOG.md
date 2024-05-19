@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.23
+Update dependencies. Adds a `tag-forbid-attr` rule that disallows the use of specified attributes on the specified tag.
+
 ## 1.0.22
 Added a new rule [htmlacademy/req-source-width-height](https://github.com/htmlacademy/linthtml-rules-htmlacademy/blob/main/rules/req-source-width-height/README.md) that requires the `width` and `height` attributes of `<source>`, inside `<picture>`.
 
