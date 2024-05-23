@@ -5,6 +5,7 @@
     <title>HTML Academy: Девайс</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="./fonts/oswald/oswald-regular.woff2" type="font/woff2" as="font">
     <script type="module" src="scripts/app.js"></script>
   </head>
   <body class="index-page">
@@ -397,11 +398,27 @@
 
     <section>
       <h2>asd</h2>
-<picture>
-  <source width="400" height="500" srcset="images/bg.jpg" type="image/jpg">
-  <img src="images/bg.jpg" width="300" height="200" alt="">
-</picture>
+      <picture>
+        <source width="400" height="500" srcset="images/bg.webp" type="image/webp">
+        <source width="400" height="500" srcset="images/bg.jpg" type="image/jpg">
+        <img src="images/bg.jpg" width="300" height="200" alt="">
+      </picture>
     </section>
+
+    <div class="content">
+      <h1 class="content__title">title</h1>
+      <p>text</p>
+    </div>
+
+    <div class="content">
+      <h1 class="content__title">title</h1>
+    </div>
+
+    <div class="content">
+      <h1 class="content__title">title</h1>
+      <p class="content__text">text</p>
+      <svg width="20" height="20"></svg>
+    </div>
 
     <script src="./js/script.min.js"></script>
   </body>

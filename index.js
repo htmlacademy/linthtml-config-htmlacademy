@@ -91,6 +91,10 @@ module.exports = {
     'htmlacademy/tag-self-close': true,
     'htmlacademy/req-source-width-height': true,
     'htmlacademy/tag-forbid-attr': false,
+    'htmlacademy/req-tags-presence': [true, ['h1', 'main']],
+    'htmlacademy/req-preload-font': true,
+    'htmlacademy/req-webp-in-picture': true,
+    'htmlacademy/no-class-in-container': false,
 
     'attr-bans': false,
     'attr-name-style': [true, 'dash'],
@@ -103,7 +107,7 @@ module.exports = {
     'attr-validate': true,
     'button-req-content': true,
     'class-no-dup': true,
-    'class-style': false, // [true, 'dash'] для html-1 и [true, 'bem'] для html-2
+    'class-style': false,
     'doctype-first': true,
     'doctype-html5': true,
     'fieldset-contains-legend': true,
