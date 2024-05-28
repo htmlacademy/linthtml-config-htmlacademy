@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.25
+Fixes `req-webp-in-picture` to not check `<picture>` if all `<source>` have attribute `type="image/svg+xml"`. 
+
 ## 1.0.24
 - Adds a `req-tags-presence` rule that requires the specified tags on the page.
 - Adds a `req-preload-font` rule that requires the `preload` value for the font.
