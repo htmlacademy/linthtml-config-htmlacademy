@@ -2,7 +2,9 @@
 
 ## 2.0.0 — ???
 
-- 
+- **BREAKING:** Renamed `img-svg-req-dimensions` → `replaced-elements-req-dimensions` (now covers all replaced elements, not just SVG)
+- `tag-self-close` now explicitly set to `'never'`
+- `tag-req-attr`: require `method` attribute on `<form>`
 
 ## 1.0.25
 Fixes `req-webp-in-picture` to not check `<picture>` if all `<source>` have attribute `type="image/svg+xml"`.
