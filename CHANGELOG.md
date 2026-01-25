@@ -1,7 +1,11 @@
 # Changelog
 
+## 2.0.0 — ???
+
+- 
+
 ## 1.0.25
-Fixes `req-webp-in-picture` to not check `<picture>` if all `<source>` have attribute `type="image/svg+xml"`. 
+Fixes `req-webp-in-picture` to not check `<picture>` if all `<source>` have attribute `type="image/svg+xml"`.
 
 ## 1.0.24
 - Adds a `req-tags-presence` rule that requires the specified tags on the page.
@@ -76,7 +80,7 @@ Added a new rule [htmlacademy/req-stylesheet-link](https://github.com/htmlacadem
 ```html
 <head>
   <link rel="stylesheet" href="styles/style.css">
-</head> 
+</head>
 ```
 
 ## 1.0.17
@@ -159,9 +163,9 @@ The following patterns are **not** considered problems:
 
 ```js
 'htmlacademy/attr-req-value': [
-  true, 
-  { 
-    ignore: ['/^data/'] 
+  true,
+  {
+    ignore: ['/^data/']
   }
 ],
 ```
@@ -204,12 +208,12 @@ Fixed `req-charset-utf` rule
   - `htmlacademy/req-single-styles`
   - `htmlacademy/tag-name-lowercase`
   - `htmlacademy/tag-self-close`
-- Disabled rules: 
+- Disabled rules:
   - `'class-style'`
   - `'spec-char-escape'`
   - `tag-self-close`
   - `input-req-label`
-- Enabled rules: 
+- Enabled rules:
   - `'id-style' : [true, 'dash'],`
   - `'input-req-label'`
   - `'label-no-enc-textarea-or-select'`
@@ -288,25 +292,25 @@ Fixed `req-charset-utf` rule
 - Fixed `head-meta-charset`
 
 ## 1.0.6
-- обновили linthtml-rules-htmlacademy 1.0.2
-- удалили `htmlacademy/attr-value-style`
+- Updated linthtml-rules-htmlacademy 1.0.2
+- Removed `htmlacademy/attr-value-style`
 
 ## 1.0.5
-- Обновили зависимости до актуальных версий
-- Добавили linthtml-rules-htmlacademy
+- Updated dependencies to latest versions
+- Added linthtml-rules-htmlacademy
 
-## 1.0.3 
-Обновляет зависимости
+## 1.0.3
+Updated dependencies
 
 ## 1.0.2
-Разрешили использовать незаполненный `alt="""`
+Allowed empty `alt=""`
 
 ## 1.0.1
-- Обновили правила до linthtml@0.7.2
+- Updated rules to linthtml@0.7.2
 
-Новые правила:
-- Требуем у `<img>` указывать 4 атрибута
-    ```json 
+New rules:
+- Require 4 attributes on `<img>`
+    ```json
     {
       "tag-req-attr": [true, {
           "img": [
@@ -318,9 +322,9 @@ Fixed `req-charset-utf` rule
       ]
     }
     ```
-- Убрали требование писать по БЭМ, так как БЭМ может быть слишком разным
+- Removed BEM requirement as BEM can vary significantly
 
 
-## 1.0.0 
-- Добавили страницы для тестов и сами тесты
-- Добавили правила для linthtml@0.6.0
+## 1.0.0
+- Added test pages and tests
+- Added rules for linthtml@0.6.0

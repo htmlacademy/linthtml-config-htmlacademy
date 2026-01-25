@@ -1,19 +1,20 @@
-<div align="center">
-    <img width="185" height="180" src="./assets/logo.svg" alt="logo linthtml-config-htmlacademy" />
-</div>
+# LintHTML Config for HTML Academy CODEGUIDE
 
-# linthtml-config-htmlacademy
-> Это стандартный конфигурационный файл для linthtml от [HTML Academy](https://htmlacademy.ru/).
+[![npm version](https://img.shields.io/npm/v/linthtml-config-htmlacademy.svg)](https://www.npmjs.com/package/linthtml-config-htmlacademy)
+[![test](https://github.com/htmlacademy/linthtml-config-htmlacademy/actions/workflows/test.yml/badge.svg)](https://github.com/htmlacademy/linthtml-config-htmlacademy/actions/workflows/test.yml)
+[![license](https://img.shields.io/npm/l/linthtml-config-htmlacademy.svg)](https://github.com/htmlacademy/linthtml-config-htmlacademy/blob/main/LICENSE)
 
-## Установка
+[LintHTML](https://linthtml.vercel.app) configuration for HTML markup validation according to [HTML Academy codeguide](https://codeguide.academy).
+
+## Installation
 
 ```bash
-npm install @linthtml/linthtml linthtml-config-htmlacademy -D
+npm install @linthtml/linthtml linthtml-config-htmlacademy --save-dev
 ```
 
-## Использование
+## Usage
 
-Когда вы установили `linthtml-config-htmlacademy` локально в свой проект, примените его в конфигурационном файле `.linthtmlrc` вашего проекта:
+Create a `.linthtmlrc` configuration file in your project root:
 
 ```json
 {
@@ -21,43 +22,50 @@ npm install @linthtml/linthtml linthtml-config-htmlacademy -D
 }
 ```
 
-### Расширение конфига
+### Extending the Config
 
-Просто добавьте ключ `"rules"` в ваш конфиг после `"extends": "linthtml-config-htmlacademy"`, а затем добавьте туда свои правила.
-
-Например, если вы хотите изменить максимальную длину `line-max-len`, то нужно:
+Add a `rules` key after `extends` to customize rules:
 
 ```json
 {
   "extends": "linthtml-config-htmlacademy",
   "rules": {
-    "line-max-len": [
-      true,
-      120
-    ]
+    "line-max-len": [true, 120]
   }
 }
 ```
 
-## Правила
-Для проекта добавляются кастомные правила от [HTML Academy](https://htmlacademy.ru/), которые лежат в отдельном репозитории [linthtml-rules-htmlacademy](https://github.com/htmlacademy/linthtml-rules-htmlacademy).
+## Rules
 
-## Использование в VS Code
-Чтобы VS Code начал подсвечивать ошибки в HTML-разметке, установите плагин [LintHTML](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-linthtml).
+This config includes custom rules from [linthtml-rules-htmlacademy](https://github.com/htmlacademy/linthtml-rules-htmlacademy). See the full [list of rules](https://github.com/htmlacademy/linthtml-rules-htmlacademy#rules).
 
-> Обязательно убедитесь, что файл настроек называется `.linthtmlrc`, так как это обязательное [требование плагина](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-linthtml#:~:text=If%20you%20have%20a%20valid%20hmllint%20configuration%20file).
+## VS Code Integration
 
-![](assets/vs-code-report.png)
+Install the [LintHTML extension](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-linthtml) to see errors highlighted in VS Code.
 
-## npm и cli
-Linthtml можно запускать в терминале. Для этого можно в секцию `"script"` в `package.json` добавить команду:
-```bash
-# package.json
-"script" {
-  "lint:html": "linthtml source/*.html --config .linthtmlrc"
+> The configuration file must be named `.linthtmlrc` as [required by the extension](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-linthtml#:~:text=If%20you%20have%20a%20valid%20hmllint%20configuration%20file).
+
+![VS Code error highlighting](assets/vs-code-report.png)
+
+## CLI Usage
+
+Add a script to your `package.json`:
+
+```json
+{
+  "scripts": {
+    "lint:html": "linthtml source/*.html --config .linthtmlrc"
+  }
 }
 ```
 
-- `linthtml` - запустит проверку HTML-файлов.
-- `source/*.html` - поиск HTML-файлов в папке `source`. 
-- `--config .linthtmlrc` - путь до конфигурационного файла. В проекте можно иметь несколько конфигурационных файлов.
+- `linthtml` — runs HTML validation
+- `source/*.html` — path to HTML files
+- `--config .linthtmlrc` — path to configuration file
+
+## Links
+
+- [HTML Academy](https://htmlacademy.ru)
+- [HTML Academy Codeguide](https://codeguide.academy)
+- [Codeguide Repository](https://github.com/htmlacademy/codeguide)
+- [LintHTML Documentation](https://linthtml.vercel.app)
