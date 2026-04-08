@@ -1,15 +1,20 @@
-# LintHTML Config for HTML Academy CODEGUIDE
+# LintHTML Config for HTML Academy Codeguide
 
 [![npm version](https://img.shields.io/npm/v/linthtml-config-htmlacademy.svg)](https://www.npmjs.com/package/linthtml-config-htmlacademy)
 [![test](https://github.com/htmlacademy/linthtml-config-htmlacademy/actions/workflows/test.yml/badge.svg)](https://github.com/htmlacademy/linthtml-config-htmlacademy/actions/workflows/test.yml)
 [![license](https://img.shields.io/npm/l/linthtml-config-htmlacademy.svg)](https://github.com/htmlacademy/linthtml-config-htmlacademy/blob/main/LICENSE)
 
-[LintHTML](https://linthtml.vercel.app) configuration for HTML markup validation according to [HTML Academy codeguide](https://codeguide.academy).
+[LintHTML](https://linthtml.vercel.app) configuration for HTML markup validation according to [HTML Academy Codeguide](https://codeguide.academy).
+
+## Requirements
+
+- Node.js >= 24
+- @linthtml/linthtml >= 0.10.0
 
 ## Installation
 
 ```bash
-npm install @linthtml/linthtml linthtml-config-htmlacademy --save-dev
+npm install -D @linthtml/linthtml linthtml-config-htmlacademy
 ```
 
 ## Usage
