@@ -3,7 +3,10 @@
   "version": "2.0.0",
   "description": "LintHTML Config for HTML Academy CODEGUIDE",
   "license": "MIT",
-  "author": "Nikolai Shabalin",
+  "engines": {
+    "node": ">=24"
+  },
+  "author": "HTML Academy <mail@htmlacademy.dev>",
   "repository": "htmlacademy/linthtml-config-htmlacademy",
   "keywords": [
     "linthtml",
