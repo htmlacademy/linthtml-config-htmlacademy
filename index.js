@@ -6,7 +6,7 @@ module.exports = {
   'attr-name-ignore-regex': 'viewBox|preserveAspectRatio',
   'rules': {
     'htmlacademy/space-between-comments': [true, 'space'],
-    'htmlacademy/a-target-rel': true,
+    'htmlacademy/a-target-rel': false, // browsers add rel="noopener" automatically since 2020
     'htmlacademy/aria-label-misuse': true,
     'htmlacademy/attr-delimiter': true,
     'htmlacademy/attr-req-value': [true, { ignore: ['alt'] }],
