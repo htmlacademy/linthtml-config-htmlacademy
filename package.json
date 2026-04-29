@@ -2,33 +2,40 @@
   "name": "linthtml-config-htmlacademy",
   "version": "2.0.0",
   "description": "LintHTML Config for HTML Academy CODEGUIDE",
-  "license": "MIT",
-  "engines": {
-    "node": ">=24"
-  },
-  "author": "HTML Academy <mail@htmlacademy.dev>",
-  "repository": "htmlacademy/linthtml-config-htmlacademy",
   "keywords": [
-    "linthtml",
+    "codeguide",
     "config",
     "htmlacademy",
-    "codeguide",
-    "linter"
+    "linter",
+    "linthtml"
   ],
-  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "HTML Academy",
+    "email": "mail@htmlacademy.dev",
+    "url": "https://htmlacademy.ru"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htmlacademy/linthtml-config-htmlacademy.git"
+  },
   "files": [
     "index.js"
   ],
+  "main": "index.js",
   "scripts": {
     "test": "linthtml test/*.html --config index.js"
-  },
-  "peerDependencies": {
-    "@linthtml/linthtml": ">=0.10.0"
   },
   "dependencies": {
     "linthtml-rules-htmlacademy": "^2.0.0"
   },
   "devDependencies": {
     "@linthtml/linthtml": "^0.10.2"
+  },
+  "peerDependencies": {
+    "@linthtml/linthtml": ">=0.10.0"
+  },
+  "engines": {
+    "node": ">=24"
   }
 }
