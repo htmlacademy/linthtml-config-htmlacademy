@@ -29,6 +29,7 @@ export default {
   'plugins': ['linthtml-rules-htmlacademy'],
   'attr-name-ignore-regex': `^(${svgCamelCaseAttributes.join('|')})$`,
   'rules': {
+    'htmlacademy/a-target-rel': true,
     'htmlacademy/aria-label-misuse': true,
     'htmlacademy/attr-delimiter': true,
     'htmlacademy/attr-order': true,

@@ -20,6 +20,7 @@
 - Activated `htmlacademy/heading-level` — heading-level skips and headings starting with anything other than `<h1>` are flagged. New rule, see [linthtml-rules-htmlacademy#41](https://github.com/htmlacademy/linthtml-rules-htmlacademy/issues/41).
 - Activated `htmlacademy/label-req-text` — `<label>` without visible text content is flagged (covers the `<label for="x"><input id="x"></label>` anti-pattern that the existing `label-req-for` allowed). New rule, see [linthtml-rules-htmlacademy#67](https://github.com/htmlacademy/linthtml-rules-htmlacademy/issues/67).
 - Activated `htmlacademy/svg-role-img` — inline `<svg>` must opt in as content (`role="img"` + `aria-label`) or as decorative (`aria-hidden="true"`). New rule, see [linthtml-rules-htmlacademy#53](https://github.com/htmlacademy/linthtml-rules-htmlacademy/issues/53).
+- Activated `htmlacademy/a-target-rel` — `<a target="_blank">` must declare `rel="noreferrer"` (which per the HTML spec implies `noopener`). Brings the explicit codeguide policy into the preset; modern browsers already add `noopener` automatically, but the rule keeps the source self-documenting and blocks referrer leak in one keyword.
 - Expanded `attr-name-ignore-regex` to cover camelCase SVG attributes (`viewBox`, `preserveAspectRatio`, `xlink:href`, `gradientTransform`, `patternUnits`, `markerWidth`, `attributeName`, `stdDeviation`, `baseFrequency`, …). Without this, the dash-case `attr-name-style` rule reports valid SVG markup. Closes [#19](https://github.com/htmlacademy/linthtml-config-htmlacademy/issues/19).
 - Expanded `htmlacademy/tag-name-lowercase` `ignore` list to all SVG filter primitives (`feBlend`, `feColorMatrix`, `feGaussianBlur`, …) and other camelCase SVG tags (`foreignObject`, `animateTransform`, `animateMotion`). Part of [#19](https://github.com/htmlacademy/linthtml-config-htmlacademy/issues/19).
 - `tag-req-attr.form`: requires the `method` attribute on `<form>`.
@@ -29,7 +30,7 @@
 ### Changed
 
 - `htmlacademy/attribute-allowed-values.input.type` whitelist expanded to the full set of HTML5 `<input type>` values (was 11 entries, now 22). The previous list was effectively a no-op because the rule itself was broken upstream; now that the rule works, the policy is to allow every valid HTML5 input type and rely on other rules for narrower constraints.
-- `htmlacademy/a-target-rel`: the plugin rule now requires `rel="noreferrer"` (which per the HTML spec implies `noopener`). Still disabled by default in this config because modern browsers add `noopener` automatically for `target="_blank"` since 2020; enable it when explicit `rel="noreferrer"` in source is preferred.
+- `htmlacademy/a-target-rel`: the plugin rule now requires `rel="noreferrer"` (which per the HTML spec implies `noopener`). Enabled in this preset (see Added).
 - `htmlacademy/no-px-size`: now also covers `<video>` and `<iframe>` (was `<img>` and `<svg>` only).
 - `htmlacademy/charset-position`: fixed so it actually requires the first `<head>` child to be `<meta charset>`; previously any first `<meta>` (e.g. `<meta name="viewport">`) passed silently.
 - `htmlacademy/aria-label-misuse`: `aria-label` on `<svg role="img">` no longer flagged — content SVG legitimately uses this pattern. See [linthtml-rules-htmlacademy#79](https://github.com/htmlacademy/linthtml-rules-htmlacademy/issues/79).
