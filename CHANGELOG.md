@@ -2,9 +2,47 @@
 
 ## 2.0.0 — ???
 
-- **BREAKING:** Renamed `img-svg-req-dimensions` → `replaced-elements-req-dimensions` (now covers all replaced elements, not just SVG)
-- `tag-self-close` now explicitly set to `'never'`
-- `tag-req-attr`: require `method` attribute on `<form>`
+### Breaking
+
+- Migrated to ESM. Configuration file renamed `index.js` → `linthtml.config.js`. Consumers extending the config by package name (`"extends": "linthtml-config-htmlacademy"` in `.linthtmlrc`) keep working through `package.json#exports`. Programmatic consumers (`require('linthtml-config-htmlacademy')`) must switch to `import`.
+- Renamed `htmlacademy/img-svg-req-dimensions` → `htmlacademy/replaced-elements-req-dimensions` (now covers `<img>`, `<svg>`, `<video>`, `<iframe>` — all replaced elements that benefit from explicit dimensions).
+- Node.js requirement bumped to >= 24.
+
+### Added
+
+- Activated `htmlacademy/req-submit-button` — every `<form>` must contain a submit button (`<button type="submit">`, `<button>` without `type`, `<input type="submit">`, or an external submitter linked via the `form` attribute). New rule, see [linthtml-rules-htmlacademy#40](https://github.com/htmlacademy/linthtml-rules-htmlacademy/issues/40).
+- Activated `htmlacademy/label-req-for` — every `<label>` must be associated with a labelable form control, either through `for`/`id` or through an inline descendant.
+- Activated `htmlacademy/boolean-attr-no-value` — boolean attributes (`disabled`, `checked`, `required`, `autofocus`, …) must be written without a value.
+- Activated `htmlacademy/icon-button-aria-label` — icon-only `<button>` elements (no visible text) must declare an accessible name via `aria-label`, `aria-labelledby`, or `title`. Addresses [linthtml-rules-htmlacademy#80](https://github.com/htmlacademy/linthtml-rules-htmlacademy/issues/80).
+- Activated `htmlacademy/tag-forbid-attr` with the redundant-`type` rule: `<link type="text/css">` and `<script type="text/javascript">` are flagged (these defaults have not been required since HTML5).
+- Activated `htmlacademy/attr-order` with the codeguide default `class → src/href → data-* → others`. Disabled `htmlacademy/class-first` in the same config to avoid duplicate reports — `attr-order` already enforces `class` as the first group.
+- Activated `htmlacademy/input-name-unique` — duplicate `<input name>` inside a single form is flagged (radio / checkbox groups exempt). New rule, see [linthtml-rules-htmlacademy#46](https://github.com/htmlacademy/linthtml-rules-htmlacademy/issues/46).
+- Activated `htmlacademy/heading-level` — heading-level skips and headings starting with anything other than `<h1>` are flagged. New rule, see [linthtml-rules-htmlacademy#41](https://github.com/htmlacademy/linthtml-rules-htmlacademy/issues/41).
+- Activated `htmlacademy/label-req-text` — `<label>` without visible text content is flagged (covers the `<label for="x"><input id="x"></label>` anti-pattern that the existing `label-req-for` allowed). New rule, see [linthtml-rules-htmlacademy#67](https://github.com/htmlacademy/linthtml-rules-htmlacademy/issues/67).
+- Activated `htmlacademy/svg-role-img` — inline `<svg>` must opt in as content (`role="img"` + `aria-label`) or as decorative (`aria-hidden="true"`). New rule, see [linthtml-rules-htmlacademy#53](https://github.com/htmlacademy/linthtml-rules-htmlacademy/issues/53).
+- Expanded `attr-name-ignore-regex` to cover camelCase SVG attributes (`viewBox`, `preserveAspectRatio`, `xlink:href`, `gradientTransform`, `patternUnits`, `markerWidth`, `attributeName`, `stdDeviation`, `baseFrequency`, …). Without this, the dash-case `attr-name-style` rule reports valid SVG markup. Closes [#19](https://github.com/htmlacademy/linthtml-config-htmlacademy/issues/19).
+- Expanded `htmlacademy/tag-name-lowercase` `ignore` list to all SVG filter primitives (`feBlend`, `feColorMatrix`, `feGaussianBlur`, …) and other camelCase SVG tags (`foreignObject`, `animateTransform`, `animateMotion`). Part of [#19](https://github.com/htmlacademy/linthtml-config-htmlacademy/issues/19).
+- `tag-req-attr.form`: requires the `method` attribute on `<form>`.
+- `tag-self-close`: explicitly `[true, 'never']`.
+- `node:test`-based test suite under `test/invalid/` for the most important policy decisions (label association, submit button, duplicate ids, boolean attribute values, icon-button accessibility, forbidden `type` attributes); fixtures in `test/valid/` (catalog page, index page, forms page) must lint clean.
+
+### Changed
+
+- `htmlacademy/attribute-allowed-values.input.type` whitelist expanded to the full set of HTML5 `<input type>` values (was 11 entries, now 22). The previous list was effectively a no-op because the rule itself was broken upstream; now that the rule works, the policy is to allow every valid HTML5 input type and rely on other rules for narrower constraints.
+- `htmlacademy/a-target-rel`: the plugin rule now requires `rel="noreferrer"` (which per the HTML spec implies `noopener`). Still disabled by default in this config because modern browsers add `noopener` automatically for `target="_blank"` since 2020; enable it when explicit `rel="noreferrer"` in source is preferred.
+- `htmlacademy/no-px-size`: now also covers `<video>` and `<iframe>` (was `<img>` and `<svg>` only).
+- `htmlacademy/charset-position`: fixed so it actually requires the first `<head>` child to be `<meta charset>`; previously any first `<meta>` (e.g. `<meta name="viewport">`) passed silently.
+- `htmlacademy/aria-label-misuse`: `aria-label` on `<svg role="img">` no longer flagged — content SVG legitimately uses this pattern. See [linthtml-rules-htmlacademy#79](https://github.com/htmlacademy/linthtml-rules-htmlacademy/issues/79).
+- Fixture `test/valid/*.html` updated to follow the new `attr-order` (`href` before `rel`, `src` before `type`) and the new `svg-role-img` (decorative `<svg>` now carries `aria-hidden="true"`).
+
+### Known limitations
+
+- Base linthtml `id-no-dup` rule is disabled because of an upstream bug ([linthtml/linthtml#469](https://github.com/linthtml/linthtml/issues/469), open since 2022). The plugin rule `htmlacademy/id-no-dup` is enabled as a working replacement, so duplicate ids are still caught.
+
+### Migration notes
+
+- Replace any usage of `htmlacademy/img-svg-req-dimensions` with `htmlacademy/replaced-elements-req-dimensions` in project-level overrides.
+- If your `.linthtmlrc` points at `node_modules/linthtml-config-htmlacademy/index.js` directly, switch to `"extends": "linthtml-config-htmlacademy"` or to the new `linthtml.config.js` path.
 
 ## 1.0.25
 Fixes `req-webp-in-picture` to not check `<picture>` if all `<source>` have attribute `type="image/svg+xml"`.
