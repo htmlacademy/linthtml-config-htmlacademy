@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: формы для конфига</title>
+  <link href="fonts/main.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <h1>Формы</h1>
+
+    <section>
+      <h2>Связь label через for</h2>
+      <form action="/api" method="post">
+        <label for="login-username">Имя пользователя</label>
+        <input type="text" id="login-username" name="username">
+
+        <label for="login-password">Пароль</label>
+        <input type="password" id="login-password" name="password">
+
+        <button type="submit">Войти</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Явная связь label для select и textarea</h2>
+      <form action="/api" method="post">
+        <label>
+          Email
+          <input type="email" name="email">
+        </label>
+
+        <label for="city">Город</label>
+        <select id="city" name="city">
+          <option value="moscow">Москва</option>
+          <option value="kazan">Казань</option>
+        </select>
+
+        <input type="submit" name="submit" value="Отправить">
+      </form>
+    </section>
+
+    <section>
+      <h2>Внешний submit через form-атрибут</h2>
+      <form id="contact-form" action="/api" method="post">
+        <label for="contact-message">Сообщение</label>
+        <textarea id="contact-message" name="message"></textarea>
+      </form>
+      <button form="contact-form" type="submit">Отправить сообщение</button>
+    </section>
+  </main>
+</body>
+</html>

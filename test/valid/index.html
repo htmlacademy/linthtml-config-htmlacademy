@@ -5,8 +5,8 @@
     <title>HTML Academy: Девайс</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./css/style.min.css" rel="stylesheet">
-    <link rel="preload" href="./fonts/oswald/oswald-regular.woff2" type="font/woff2" as="font">
-    <script type="module" src="scripts/app.js"></script>
+    <link href="./fonts/oswald/oswald-regular.woff2" rel="preload" type="font/woff2" as="font">
+    <script src="scripts/app.js" type="module"></script>
   </head>
   <body class="index-page">
     <!-- HEADER -->
@@ -19,7 +19,7 @@
 
           <form class="nav__search search" action="https://echo.htmlacademy.ru" method="get">
             <input class="search__input" type="search" name="header-search" placeholder="Поиск по сайту"
-                   aria-label="Поиск по сайту" disabled="disabled">
+                   aria-label="Поиск по сайту" disabled>
             <button class="search__button" type="submit">Найти</button>
           </form>
 
@@ -417,7 +417,7 @@
     <div class="content">
       <h1 class="content__title">title</h1>
       <p class="content__text">text</p>
-      <svg width="20" height="20"></svg>
+      <svg aria-hidden="true" width="20" height="20"></svg>
     </div>
 
     <picture>
