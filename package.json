@@ -20,17 +20,24 @@
     "url": "git+https://github.com/htmlacademy/linthtml-config-htmlacademy.git"
   },
   "files": [
-    "index.js"
+    "linthtml.config.js"
   ],
-  "main": "index.js",
+  "type": "module",
+  "exports": "./linthtml.config.js",
   "scripts": {
-    "test": "linthtml test/*.html --config index.js"
+    "test": "npm run test:lint && npm run test:valid && npm run test:invalid",
+    "test:lint": "eslint .",
+    "test:valid": "linthtml \"test/valid/**/*.html\" --config linthtml.config.js",
+    "test:invalid": "node --test \"test/invalid/**/*.test.js\""
   },
   "dependencies": {
     "linthtml-rules-htmlacademy": "^2.0.0"
   },
   "devDependencies": {
-    "@linthtml/linthtml": "^0.10.2"
+    "@linthtml/linthtml": "^0.10.2",
+    "eslint": "^10.4.0",
+    "eslint-config-htmlacademy": "^11.0.0",
+    "globals": "^17.6.0"
   },
   "peerDependencies": {
     "@linthtml/linthtml": ">=0.10.0"
