@@ -33,6 +33,7 @@
 - `htmlacademy/no-px-size`: now also covers `<video>` and `<iframe>` (was `<img>` and `<svg>` only).
 - `htmlacademy/charset-position`: fixed so it actually requires the first `<head>` child to be `<meta charset>`; previously any first `<meta>` (e.g. `<meta name="viewport">`) passed silently.
 - `htmlacademy/aria-label-misuse`: `aria-label` on `<svg role="img">` no longer flagged — content SVG legitimately uses this pattern. See [linthtml-rules-htmlacademy#79](https://github.com/htmlacademy/linthtml-rules-htmlacademy/issues/79).
+- Disabled base `button-req-content` — replaced by `htmlacademy/icon-button-aria-label`, which is broader (recognises `aria-label`, `aria-labelledby`, and `title`, not just text or `aria-label`). Removes the duplicate report on empty/icon-only buttons.
 - Fixture `test/valid/*.html` updated to follow the new `attr-order` (`href` before `rel`, `src` before `type`) and the new `svg-role-img` (decorative `<svg>` now carries `aria-hidden="true"`).
 
 ### Known limitations

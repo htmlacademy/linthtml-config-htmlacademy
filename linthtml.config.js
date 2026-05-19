@@ -1,42 +1,49 @@
+const svgCamelCaseTags = [
+  'clipPath', 'textPath', 'linearGradient', 'radialGradient', 'foreignObject',
+  'feBlend', 'feColorMatrix', 'feComponentTransfer', 'feComposite', 'feConvolveMatrix',
+  'feDiffuseLighting', 'feDisplacementMap', 'feDistantLight', 'feDropShadow', 'feFlood',
+  'feFuncA', 'feFuncB', 'feFuncG', 'feFuncR', 'feGaussianBlur', 'feImage', 'feMerge',
+  'feMergeNode', 'feMorphology', 'feOffset', 'fePointLight', 'feSpecularLighting',
+  'feSpotLight', 'feTile', 'feTurbulence', 'animateTransform', 'animateMotion',
+];
+
+const svgCamelCaseAttributes = [
+  'viewBox', 'preserveAspectRatio', 'xlink:href', 'xmlns:xlink',
+  'gradientTransform', 'gradientUnits', 'patternTransform', 'patternUnits', 'patternContentUnits',
+  'markerWidth', 'markerHeight', 'markerUnits', 'refX', 'refY',
+  'clipPathUnits', 'maskUnits', 'maskContentUnits',
+  'attributeName', 'attributeType', 'repeatCount', 'repeatDur', 'textLength', 'lengthAdjust',
+  'stdDeviation', 'baseFrequency', 'numOctaves', 'stitchTiles', 'surfaceScale',
+  'kernelMatrix', 'kernelUnitLength', 'edgeMode', 'specularConstant', 'specularExponent',
+  'pointsAtX', 'pointsAtY', 'pointsAtZ', 'pathLength', 'startOffset', 'tableValues',
+  'spreadMethod', 'primitiveUnits', 'filterUnits',
+];
+
+const allowedInputTypes = [
+  'button', 'checkbox', 'color', 'date', 'datetime-local', 'email', 'file',
+  'hidden', 'image', 'month', 'number', 'password', 'radio', 'range', 'reset',
+  'search', 'submit', 'tel', 'text', 'time', 'url', 'week',
+];
+
 export default {
-  'id-class-ignore-regex': false,
-  'line-max-len-ignore-regex': false,
-  'spec-char-escape': false,
   'plugins': ['linthtml-rules-htmlacademy'],
-  'attr-name-ignore-regex': '^(viewBox|preserveAspectRatio|xlink:href|xmlns:xlink|gradientTransform|gradientUnits|patternTransform|patternUnits|patternContentUnits|markerWidth|markerHeight|markerUnits|refX|refY|clipPathUnits|maskUnits|maskContentUnits|attributeName|attributeType|repeatCount|repeatDur|textLength|lengthAdjust|stdDeviation|baseFrequency|numOctaves|stitchTiles|surfaceScale|kernelMatrix|kernelUnitLength|edgeMode|specularConstant|specularExponent|pointsAtX|pointsAtY|pointsAtZ|pathLength|startOffset|tableValues|spreadMethod|primitiveUnits|filterUnits)$',
+  'attr-name-ignore-regex': `^(${svgCamelCaseAttributes.join('|')})$`,
   'rules': {
-    'htmlacademy/space-between-comments': [true, 'space'],
-    'htmlacademy/a-target-rel': false,
     'htmlacademy/aria-label-misuse': true,
     'htmlacademy/attr-delimiter': true,
-    'htmlacademy/attr-req-value': [true, {ignore: ['alt']}],
-    'htmlacademy/attribute-allowed-values': [
-      true, {
-        'input': {
-          attributes: {
-            'type': {
-              enum: [
-                'button', 'checkbox', 'color', 'date', 'datetime-local', 'email', 'file',
-                'hidden', 'image', 'month', 'number', 'password', 'radio', 'range', 'reset',
-                'search', 'submit', 'tel', 'text', 'time', 'url', 'week',
-              ],
-            },
-          },
-        },
-      },
-    ],
     'htmlacademy/attr-order': true,
+    'htmlacademy/attr-req-value': [true, {ignore: ['alt']}],
+    'htmlacademy/attribute-allowed-values': [true, {
+      input: {attributes: {type: {enum: allowedInputTypes}}},
+    }],
     'htmlacademy/ban-url-spaces': true,
     'htmlacademy/boolean-attr-no-value': true,
     'htmlacademy/charset-position': true,
-    // class-first is a subset of attr-order; disabled to avoid duplicate reports on the same violation.
-    'htmlacademy/class-first': false,
     'htmlacademy/form-action-attribute': true,
     'htmlacademy/head-meta-charset': true,
     'htmlacademy/heading-level': true,
     'htmlacademy/icon-button-aria-label': true,
     'htmlacademy/id-no-dup': true,
-    'htmlacademy/replaced-elements-req-dimensions': true,
     'htmlacademy/input-name-unique': true,
     'htmlacademy/input-req-label': true,
     'htmlacademy/label-req-for': true,
@@ -45,95 +52,44 @@ export default {
     'htmlacademy/no-blocking-script': true,
     'htmlacademy/no-double-br': true,
     'htmlacademy/no-px-size': true,
+    'htmlacademy/replaced-elements-req-dimensions': true,
     'htmlacademy/req-charset-utf': true,
     'htmlacademy/req-head-styles': true,
     'htmlacademy/req-mailto': true,
     'htmlacademy/req-meta-viewport': true,
+    'htmlacademy/req-preload-font': true,
     'htmlacademy/req-single-styles': true,
+    'htmlacademy/req-source-width-height': true,
     'htmlacademy/req-stylesheet-link': true,
     'htmlacademy/req-submit-button': true,
+    'htmlacademy/req-tags-presence': [true, ['h1', 'main']],
+    'htmlacademy/req-webp-in-picture': true,
     'htmlacademy/section-has-heading': true,
+    'htmlacademy/space-between-comments': [true, 'space'],
     'htmlacademy/svg-role-img': true,
-    'htmlacademy/tag-name-lowercase': [true, {
-      ignore: [
-        'clipPath', 'textPath', 'linearGradient', 'radialGradient', 'foreignObject',
-        'feBlend', 'feColorMatrix', 'feComponentTransfer', 'feComposite', 'feConvolveMatrix',
-        'feDiffuseLighting', 'feDisplacementMap', 'feDistantLight', 'feDropShadow', 'feFlood',
-        'feFuncA', 'feFuncB', 'feFuncG', 'feFuncR', 'feGaussianBlur', 'feImage', 'feMerge',
-        'feMergeNode', 'feMorphology', 'feOffset', 'fePointLight', 'feSpecularLighting',
-        'feSpotLight', 'feTile', 'feTurbulence', 'animateTransform', 'animateMotion',
-      ],
-    }],
-    'htmlacademy/tag-req-attr': [
-      true, {
-        'input': [
-          {
-            name: 'name',
-            ignore: {
-              type: 'submit',
-            },
-          },
-        ],
-        'select': [
-          {
-            name: 'name',
-          },
-        ],
-        'textarea': [
-          {
-            name: 'name',
-          },
-        ],
-        'time': [
-          {
-            name: 'datetime',
-          },
-        ],
-        'source': [
-          {
-            name: 'type',
-          },
-        ],
-        'button': [
-          {
-            name: 'type',
-          },
-        ],
-        'a': [
-          {
-            name: 'href',
-          },
-        ],
-        'form': [
-          {
-            name: 'method',
-          },
-        ],
-      },
-    ],
-    'htmlacademy/tag-self-close': [true, 'never'],
-    'htmlacademy/req-source-width-height': true,
     'htmlacademy/tag-forbid-attr': [true, {
       link: [{name: 'type', value: 'text/css'}],
       script: [{name: 'type', value: 'text/javascript'}],
     }],
-    'htmlacademy/req-tags-presence': [true, ['h1', 'main']],
-    'htmlacademy/req-preload-font': true,
-    'htmlacademy/req-webp-in-picture': true,
-    'htmlacademy/no-class-in-container': false,
+    'htmlacademy/tag-name-lowercase': [true, {ignore: svgCamelCaseTags}],
+    'htmlacademy/tag-req-attr': [true, {
+      a: [{name: 'href'}],
+      button: [{name: 'type'}],
+      form: [{name: 'method'}],
+      input: [{name: 'name', ignore: {type: 'submit'}}],
+      select: [{name: 'name'}],
+      source: [{name: 'type'}],
+      textarea: [{name: 'name'}],
+      time: [{name: 'datetime'}],
+    }],
+    'htmlacademy/tag-self-close': [true, 'never'],
 
-    'attr-bans': false,
     'attr-name-style': [true, 'dash'],
-    'attr-new-line': false,
     'attr-no-dup': true,
     'attr-no-unsafe-char': true,
-    'attr-order': false,
     'attr-quote-style': [true, 'double'],
-    'attr-req-value': false,
     'attr-validate': true,
-    'button-req-content': true,
     'class-no-dup': true,
-    'class-style': false,
     'doctype-first': true,
     'doctype-html5': true,
     'fieldset-contains-legend': true,
@@ -141,40 +97,19 @@ export default {
     'focusable-tabindex-style': true,
     'head-req-title': true,
     'head-valid-content-model': true,
-    'href-style': false,
     'html-req-lang': true,
     'html-valid-content-model': true,
-    'id-class-no-ad': false,
-    'id-class-style': false,
-    // base linthtml rule is broken (linthtml/linthtml#469, open since 2022);
-    // replaced by 'htmlacademy/id-no-dup' above
-    'id-no-dup': false,
     'id-style': [true, 'dash'],
     'img-req-alt': [true, 'allownull'],
     'img-req-src': true,
-    'indent-style': false,
-    'indent-width': false,
     'input-btn-req-value-or-title': true,
     'input-radio-req-name': true,
-    'input-req-label': false,
     'label-no-enc-textarea-or-select': true,
-    'label-req-for': false,
     'lang-style': [true, 'case'],
-    'line-end-style': false,
-    'line-max-len': false,
-    'line-no-trailing-whitespace': false,
     'no-surrounding-whitespace': true,
-    'link-min-length-4': false,
-    'spec-char-escape': false,
-    'link-req-noopener': false,
-    'table-req-caption': false,
-    'table-req-header': false,
     'tag-bans': [true, 'style'],
     'tag-close': true,
-    'tag-name-lowercase': false,
     'tag-name-match': true,
-    'tag-self-close': false,
-    'title-max-len': false,
     'title-no-dup': true,
   },
 };
