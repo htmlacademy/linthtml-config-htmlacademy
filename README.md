@@ -9,7 +9,7 @@
 ## Requirements
 
 - Node.js >= 24
-- @linthtml/linthtml >= 0.10.0
+- `@linthtml/linthtml` >= 0.10.0
 
 ## Installation
 
@@ -29,7 +29,7 @@ Create a `.linthtmlrc` configuration file in your project root:
 
 ### Extending the Config
 
-Add a `rules` key after `extends` to customize rules:
+Add a `rules` key after `extends` to override or supplement rules:
 
 ```json
 {
@@ -42,7 +42,7 @@ Add a `rules` key after `extends` to customize rules:
 
 ## Rules
 
-This config includes custom rules from [linthtml-rules-htmlacademy](https://github.com/htmlacademy/linthtml-rules-htmlacademy). See the full [list of rules](https://github.com/htmlacademy/linthtml-rules-htmlacademy#rules).
+This config activates every rule from [linthtml-rules-htmlacademy](https://github.com/htmlacademy/linthtml-rules-htmlacademy) with HTML Academy defaults. See the full [list of rules](https://github.com/htmlacademy/linthtml-rules-htmlacademy#rules).
 
 ## VS Code Integration
 
